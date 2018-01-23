@@ -1,0 +1,11 @@
+* DELAY FLIP-FLOP
+
+.include "C:\Program Files\OrCAD\OrCAD_16.6_Lite\tools\pspice\library\dig_io.lib"
+.include "C:\Program Files\OrCAD\OrCAD_16.6_Lite\tools\pspice\library\7400.lib"
+
+VDD		2 0			5V
+VIN		5 0			PULSE (0 5 0 0.001NS 0.001NS 0.10MS 0.24MS)
+
+.TRAN	0.001MS 100MS
+.PROBE
+.END

@@ -1,0 +1,22 @@
+*BJT Common Emitter Amplifier
+Vcc		1	0	DC	20V
+Vin		2	0	sin(0 1.1 1K)
+*					DC AC Freq
+Rb1		1	4	33Kohms
+Rb2		4	0	10Kohms
+Cb		2	4	10uF
+RL		1	3	4.7Kohms
+Re		5	0	2.2Kohms
+Q1		3	4	5	Mod1
+*		C	B	E	Model Name
+
+.Model Mod1 NPN(BF=300 BR=3.9 IS=2.7E-14 RB=30 RC=1.9
++ RE=0.1 VA=317 TF=0.3ns TR=144ns CJE=23.6pF PE=0.88
++ CJC=9.44pF PC=0.56)
+.Temp=100
+.OP
+*Select the output file to obtain all the SPICE OP data.
+.TRAN 10us 2000us 0 2us
+*Print Step Final Time
+.PROBE
+.END

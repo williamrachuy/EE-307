@@ -1,0 +1,9 @@
+* COLLIN
+Vgs 1 0
+Vds 2 0
+MN 2 1 0 0 N1
+
+.MODEL N1 NMOS (VTO=3.0 KP=560E-6)
+.DC Vds 0 16 0.05 Vgs 0.5 -6 -0.5
+.PROBE
+.END

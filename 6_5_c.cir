@@ -1,0 +1,8 @@
+* 6.5c
+VSS  1 0 15
+VI 2 0 6.67
+MP 3 2 1 1 PE
+R 3 0 5E3
+
+.MODEL PE PMOS (VTO=-1.5 KP=60E-6)
+.END
